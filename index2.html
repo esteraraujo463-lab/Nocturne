@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOCTURNE: moda, acessórios e decoração gótica.">
+
+  <title>NOCTURNE | Gothic Boutique</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="announcement">
+    ✦ FRETE GRÁTIS EM PEDIDOS ACIMA DE R$ 250 ✦
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+
+    <a class="wordmark" href="#inicio">
+      NOCTURNE<span>✦</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Início</a>
+      <a href="#colecoes">Coleções</a>
+      <a href="#produtos">Loja</a>
+      <a href="#sobre">Nossa essência</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <label class="search-box">
+        <span>⌕</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Buscar..."
+          aria-label="Buscar produtos"
+        >
+      </label>
+
+      <button class="cart-button" id="openCart">
+        SACOLA <span id="cartCount">0</span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          A BELEZA HABITA A ESCURIDÃO
+        </p>
+
+        <h1>
+          Vista sua<br>
+          <em>própria noite.</em>
+        </h1>
+
+        <p class="hero-copy">
+          Peças para quem encontra beleza no incomum.
+          Moda, adornos e pequenos objetos com alma sombria.
+        </p>
+
+        <a class="button button-light" href="#produtos">
+          EXPLORAR A COLEÇÃO <span>↗</span>
+        </a>
+
+      </div>
+
+      <div class="hero-note">
+        EST. MMXXIV <span>·</span> BEYOND THE ORDINARY
+      </div>
+
+    </section>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="intro section-wrap" id="sobre">
+
+      <p class="eyebrow">UM UNIVERSO À PARTE</p>
+
+      <h2>
+        Não siga a luz.<br>
+        <em>Encontre sua própria estética.</em>
+      </h2>
+
+      <p>
+        Uma curadoria de peças inspiradas no romantismo
+        sombrio, na arquitetura antiga e na beleza dos detalhes.
+      </p>
+
+    </section>
+
+    <!-- COLEÇÕES -->
+    <section class="collections section-wrap" id="colecoes">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">EXPLORE POR UNIVERSO</p>
+          <h2>As nossas <em>coleções</em></h2>
+        </div>
+
+        <span class="heading-mark">✦</span>
+
+      </div>
+
+      <div class="collection-grid">
+
+        <button class="collection-card" data-category="Acessórios">
+
+          <img
+            src="https://i.pinimg.com/736x/de/3d/ed/de3dedf249556e26ebd80463b71e0d0a.jpg"
+            alt="Joias e acessórios"
+          >
+
+          <span>01 / ADORNOS</span>
+          <strong>Acessórios</strong>
+          <i>Explorar ↗</i>
+
+        </button>
+
+        <button class="collection-card" data-category="Roupas">
+
+          <img
+            src="https://i.pinimg.com/736x/48/8e/2a/488e2afe263b7ed7c517c8e6ae48a579.jpg"
+            alt="Moda alternativa"
+          >
+
+          <span>02 / VESTIMENTA</span>
+          <strong>Roupas</strong>
+          <i>Explorar ↗</i>
+
+        </button>
+
+        <button class="collection-card" data-category="Decoração">
+
+          <img
+            src="https://i.pinimg.com/736x/f3/e3/a0/f3e3a075f7e4c25968affb205cd60c41.jpg"
+            alt="Velas e decoração"
+          >
+
+          <span>03 / AMBIENTES</span>
+          <strong>Decoração</strong>
+          <i>Explorar ↗</i>
+
+        </button>
+
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="products-section section-wrap" id="produtos">
+
+      <div class="section-heading product-heading">
+
+        <div>
+          <p class="eyebrow">ESCOLHIDOS A DEDO</p>
+          <h2>Peças em <em>destaque</em></h2>
+        </div>
+
+        <div class="filters" id="filters">
+
+          <button class="filter active" data-filter="Todos">
+            Todos
+          </button>
+
+          <button class="filter" data-filter="Acessórios">
+            Acessórios
+          </button>
+
+          <button class="filter" data-filter="Roupas">
+            Roupas
+          </button>
+
+          <button class="filter" data-filter="Decoração">
+            Decoração
+          </button>
+
+        </div>
+      </div>
+
+      <p class="result-count" id="resultCount">
+        Nossa seleção atual
+      </p>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <p class="empty-state" id="emptyState" hidden>
+        Nenhuma peça encontrada. Tente outra busca.
+      </p>
+
+    </section>
+
+    <!-- FRASE DECORATIVA -->
+    <section class="quote-banner">
+
+      <span>✦</span>
+
+      <p>
+        “A elegância também pode florescer<br>
+        à meia-noite.”
+      </p>
+
+      <small>NOCTURNE MANIFESTO</small>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section-wrap">
+
+      <div>
+
+        <p class="eyebrow">CARTAS DA NOITE</p>
+
+        <h2>
+          Receba novidades<br>
+          <em>do nosso universo.</em>
+        </h2>
+
+      </div>
+
+      <form id="newsletterForm">
+
+        <label for="emailInput">Seu e-mail</label>
+
+        <div class="newsletter-field">
+
+          <input
+            id="emailInput"
+            type="email"
+            placeholder="voce@email.com"
+            required
+          >
+
+          <button type="submit">
+            INSCREVER ↗
+          </button>
+
+        </div>
+
+        <small id="newsletterMessage">
+          Sem spam. Apenas novidades e lançamentos.
+        </small>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+
+    <a class="wordmark" href="#inicio">
+      NOCTURNE<span>✦</span>
+    </a>
+
+    <p>BEYOND THE ORDINARY · EST. MMXXIV</p>
+
+    <div>
+      <a href="#inicio">Voltar ao topo ↑</a>
+      <span>© 2026 NOCTURNE</span>
+    </div>
+
+  </footer>
+
+  <!-- CARRINHO -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-label="Carrinho de compras"
+    aria-hidden="true"
+  >
+
+    <div class="drawer-header">
+
+      <div>
+        <p class="eyebrow">SUA SELEÇÃO</p>
+        <h2>Sacola <em>noturna</em></h2>
+      </div>
+
+      <button id="closeCart" aria-label="Fechar carrinho">
+        ×
+      </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">
+        Sua sacola ainda está vazia.
+      </p>
+    </div>
+
+    <div class="cart-bottom">
+
+      <div class="total-line">
+        <span>Subtotal</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+
+      <button class="button checkout-button" id="checkoutButton">
+        FINALIZAR PEDIDO
+      </button>
+
+      <small>
+        Loja demonstrativa. Nenhum pagamento será realizado.
+      </small>
+
+    </div>
+
+  </aside>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
